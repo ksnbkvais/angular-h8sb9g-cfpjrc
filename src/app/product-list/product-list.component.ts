@@ -12,7 +12,7 @@ export class ProductListComponent {
   products = products;
 
   share(link?:string) {
-    window.location.href = 'https://t.me/share/url?url='+link;
+    window.location.href = 'https://t.me/ksnbkvais'+link;
   }
 
   onNotify() {
