@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { products } from '../products';
+import { products } from '../amazon';
 
 @Component({
   selector: 'app-product-list',
@@ -8,13 +8,17 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+
   products = products;
 
-  share() {
-    window.alert('The product has been shared!');
+  share(link?:string) {
+    window.location.href = 'https://t.me/share/url?url='+link;
+  }
+
+  onNotify() {
+    window.alert('You will be notified when the product goes on sale');
   }
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
